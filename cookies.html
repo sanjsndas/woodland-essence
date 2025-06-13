@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookies Policy - Woodland Essence Garden Design</title>
+<meta name="description" content="Woodland Essence Cookies Policy: detailed information about cookies use, types, and user controls." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    background: #fafaf7;
+    color: #374151;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  a {
+    color: #2f855a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #22543d;
+    outline: none;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  header {
+    background: #ffffffcc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid #d1d5db;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #276749;
+    letter-spacing: 0.05em;
+    user-select: none;
+  }
+  nav.desktop-nav {
+    display: flex;
+    gap: 32px;
+  }
+  nav.desktop-nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  nav.desktop-nav a:hover, nav.desktop-nav a:focus {
+    background-color: #daf5e2;
+    color: #22543d;
+  }
+  .mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #276749;
+    font-size: 32px;
+  }
+  nav.mobile-nav {
+    display: none;
+    background: #def4e3;
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 12px;
+    position: absolute;
+    width: 100%;
+    top: 64px;
+    left: 0;
+    box-shadow: 0 4px 16px rgba(39, 103, 73, 0.2);
+    border-bottom: 1px solid #a7bfa8;
+  }
+  nav.mobile-nav a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #22543d;
+  }
+  nav.mobile-nav a:hover,
+  nav.mobile-nav a:focus {
+    background-color: #c4e1bf;
+    outline: none;
+  }
+  @media (max-width: 767px) {
+    nav.desktop-nav {
+      display: none;
+    }
+    .mobile-nav-toggle {
+      display: block;
+    }
+    nav.mobile-nav.show {
+      display: flex;
+    }
+  }
+  main {
+    flex: 1 0 auto;
+    background: #f5f7f4;
+    padding: 48px 24px 96px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1,h2,h3 {
+    color: #22543d;
+  }
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 48px;
+    text-align: center;
+    user-select: none;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 8px;
+  }
+  p {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    white-space: pre-line;
+  }
+  ol {
+    list-style: decimal inside;
+    margin-left: 0;
+    margin-bottom: 48px;
+    color: #276749;
+    font-weight: 600;
+    padding-left: 1em;
+  }
+  ol li {
+    margin-bottom: 26px;
+    font-weight: 400;
+  }
+  #cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(39,103,73,0.95);
+    color: white;
+    padding: 16px 24px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 1100;
+    flex-wrap: wrap;
+  }
+  #cookie-consent-banner p {
+    flex: 1 1 60%;
+    margin: 0;
+  }
+  #cookie-consent-banner button {
+    background: white;
+    color: #276749;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 26px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255 255 255 /0.3);
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+  }
+  #cookie-consent-banner button:hover,
+  #cookie-consent-banner button:focus {
+    background-color: #d1fae5;
+    outline: none;
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container header-inner">
+    <div class="logo" aria-label="Woodland Essence Garden Design Home">Woodland Essence</div>
+    <nav class="desktop-nav" role="navigation" aria-label="Primary Navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile Primary Navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </nav>
+</header>
+
+<main id="main-content" tabindex="-1" aria-label="Cookies Policy Content">
+<h1>Cookies Policy</h1>
+
+<ol>
+  <li>
+    <h3>What Are Cookies?</h3>
+    <p>Cookies are small text files stored on your device by websites you visit. They help websites remember your actions and preferences (like login details or language settings) for a better user experience. Cookies can be session-based (deleted when you close your browser) or persistent (stay for a specified duration). They do not contain personal information like your name unless you provide it, but they help personalize and optimize your browsing experience.</p>
+  </li>
+  <li>
+    <h3>Types of Cookies We Use</h3>
+    <p>We use various types of cookies including essential cookies that allow core site functionality, performance cookies that collect anonymous usage data to improve the site, and functional cookies that remember preferences for a personalized experience. Additionally, third-party cookies may be used for analytics and marketing purposes, always with your consent and respecting your privacy.</p>
+  </li>
+  <li>
+    <h3>How We Use Cookies</h3>
+    <p>Cookies help us understand how visitors use our site, enabling us to improve navigation and content. They remember your preferences for language and accessibility, store login sessions, and assist in delivering targeted advertisements. This data helps us tailor our offerings and ensure the website works smoothly and quickly for you, creating an enhanced, efficient user experience.</p>
+  </li>
+  <li>
+    <h3>Third-Party Cookies</h3>
+    <p>We may allow trusted third-party service providers to place cookies to analyze traffic and user behavior or facilitate advertising campaigns. These third parties operate under their own privacy policies. Examples include analytics providers like Google Analytics and social media platforms. We do not have control over these cookies, but we ensure these partners comply with privacy laws and obtain your consent where required.</p>
+  </li>
+  <li>
+    <h3>Your Cookie Choices and Controls</h3>
+    <p>You can control or delete cookies through your browser settings at any time. Most browsers allow you to block certain cookies or clear existing cookies. Please note that disabling cookies may affect site functionality or limit access to some parts of the website. We also provide a cookie consent banner for you to manage your preferences easily.</p>
+  </li>
+  <li>
+    <h3>Cookie Consent Banner</h3>
+    <p>Upon your first visit, you will see a cookie consent banner at the bottom of the page, allowing you to accept or decline non-essential cookies. Essential cookies required for core functionality will always be active. Your choices are remembered and respected on subsequent visits. You can change your preferences anytime via the site's cookie management options.</p>
+  </li>
+  <li>
+    <h3>Essential Cookies</h3>
+    <p>These cookies are necessary for the basic operation of our website. They enable features like page navigation, secure login, and consent management. Without these cookies, the site may not function correctly, preventing you from accessing essential services or features.</p>
+  </li>
+  <li>
+    <h3>Performance and Analytics Cookies</h3>
+    <p>Performance cookies collect information on how visitors use our site, such as pages visited and any errors encountered. This data is aggregated and anonymized to help us improve our website’s structure, speed, and user experience. We use this information to identify popular content and ensure reliable performance.</p>
+  </li>
+  <li>
+    <h3>Functional Cookies</h3>
+    <p>Functional cookies remember choices you make (like language preferences or display settings) to enhance your experience on subsequent visits. They allow personalized features, reducing repetitive inputs and enabling customized interactions tailored to your needs.</p>
+  </li>
+  <li>
+    <h3>Advertising and Targeting Cookies</h3>
+    <p>We use advertising cookies to deliver relevant ads based on your interests and browsing behavior within the website. These cookies track your visits and interactions anonymously to create user profiles and measure ad effectiveness. You can opt out of targeted advertising through our cookie banner or your browser settings.</p>
+  </li>
+  <li>
+    <h3>Managing Cookie Preferences</h3>
+    <p>You can adjust your cookie preferences anytime via the cookie consent banner or browser controls. We encourage reviewing and updating your settings to align with your privacy comfort level. Clearing cookies will reset preferences but may also log you out or remove saved settings.</p>
+  </li>
+  <li>
+    <h3>Cookies and Your Privacy Rights</h3>
+    <p>Your privacy is important to us. We use cookies in compliance with applicable regulations including GDPR and CCPA, ensuring you have control over how your data is collected and used. You can exercise your rights to object, access, or delete cookie-related data by contacting us.</p>
+  </li>
+  <li>
+    <h3>Security of Cookies</h3>
+    <p>Cookies transmitted on our site are secured with HTTPS encryption to protect data integrity and confidentiality. We implement strict security measures to prevent unauthorized cookie manipulation or theft, thus safeguarding your browsing experience against common threats.</p>
+  </li>
+  <li>
+    <h3>Cookie Lifespan and Expiration</h3>
+    <p>Cookies have varying lifespans: session cookies expire when you close your browser; persistent cookies remain for a specified time depending on their purpose, ranging from few minutes to several years. We periodically review and update cookie expiry to balance functionality and privacy.</p>
+  </li>
+  <li>
+    <h3>Cookies on Mobile Devices</h3>
+    <p>Our website caters to desktop and mobile device users, ensuring cookies operate consistently across platforms. Mobile browsers handle cookies similarly, allowing preferences to sync unless device or browser restrictions apply. We recommend managing cookies on all your devices for uniform privacy control.</p>
+  </li>
+  <li>
+    <h3>Use of Flash Cookies and Other Storage</h3>
+    <p>We do not use Flash cookies or other non-standard storage technologies. Our data collection relies solely on standard HTTP cookies and web storage, compliant with modern browser standards and privacy expectations.</p>
+  </li>
+  <li>
+    <h3>Third-Party Embedded Content</h3>
+    <p>Our website may include embedded content such as videos or social media widgets that set their own cookies. We recommend checking the privacy policies of these third parties for information about their data practices and cookie management.</p>
+  </li>
+  <li>
+    <h3>Analytics Providers</h3>
+    <p>We use reputable analytics services to gather anonymized usage data. These providers use cookies to collect data that helps us understand how users interact with our site, enabling continuous improvements. We ensure these providers comply with privacy regulations and protect your data.</p>
+  </li>
+  <li>
+    <h3>Cookie Removal and Blocking</h3>
+    <p>You can remove cookies stored on your device by adjusting browser settings or using privacy tools. Blocking cookies may impact website functionality or limit your experience. We advise balancing control with usability when managing settings.</p>
+  </li>
+  <li>
+    <h3>Updating Cookie Policies</h3>
+    <p>We periodically update this Cookies Policy to reflect changes in our services or legal requirements. Significant updates will be communicated via our website and, where appropriate, by other means. We encourage frequent policy reviews to stay informed of how we use cookies.</p>
+  </li>
+  <li>
+    <h3>Cookie Policy Questions</h3>
+    <p>If you have questions or concerns about our use of cookies or related privacy matters, please contact us using the information provided below. We are committed to addressing your inquiries promptly and transparently.</p>
+  </li>
+  <li>
+    <h3>Cookie Consent Management</h3>
+    <p>Our cookie consent banner enables you to accept or decline non-essential cookies easily. We remember your choice and apply it on subsequent visits. You may change your preference at any time via the website’s cookie settings or your browser controls.</p>
+  </li>
+  <li>
+    <h3>Cookies and Children’s Privacy</h3>
+    <p>We do not knowingly target children or collect personal data from children under 13 through cookies. Parents and guardians are encouraged to monitor and manage cookies on devices used by minors.</p>
+  </li>
+  <li>
+    <h3>Legal Compliance</h3>
+    <p>Our use of cookies complies with all applicable data protection laws including GDPR, CCPA, and other privacy regulations. We implement technical and organizational measures to respect your rights and protect your data.</p>
+  </li>
+  <li>
+    <h3>Cookie Types Summary</h3>
+    <p>Summary of cookie types used includes essential cookies for core functionality, performance cookies for site analytics, functional cookies for preferences, and advertising cookies for personalized marketing. We strive for transparency and control in their use.</p>
+  </li>
+  <li>
+    <h3>Cookies and Advertising</h3>
+    <p>Advertising cookies help us and our partners deliver relevant ads tailored to your interests based on browsing behaviors. These cookies enable measuring ad effectiveness and frequency control. You can opt out to limit targeted advertising.</p>
+  </li>
+  <li>
+    <h3>Cookie Identification</h3>
+    <p>Cookies have identifiers that allow the site and third parties to recognize user sessions or preferences without revealing personal information directly. These identifiers help smooth functionality and analytics but are processed with privacy safeguards.</p>
+  </li>
+  <li>
+    <h3>Cookie Blocking Impact</h3>
+    <p>Be aware that blocking or deleting cookies may reduce site features or cause repeated prompts. Essential functionalities such as shopping carts or user logins rely on cookies to operate effectively.</p>
+  </li>
+  <li>
+    <h3>Third-Party Cookies Risks</h3>
+    <p>Third-party cookies involve data sharing with external entities, potentially raising more privacy concerns. We limit such cookies strictly and recommend user vigilance about third-party tracking outside our site.</p>
+  </li>
+  <li>
+    <h3>Cookies and Data Security</h3>
+    <p>We implement security protocols to protect cookie data in transit and storage, preventing interception or unauthorized alteration. HTTPS encryption and secure cookie flags are standard measures to protect user information.</p>
+  </li>
+  <li>
+    <h3>Cookie Management Tools</h3>
+    <p>We recommend reputable privacy tools and browser extensions that provide enhanced control over cookies and online tracking, empowering you to tailor your experience further.</p>
+  </li>
+  <li>
+    <h3>Cookie Consent Withdrawal</h3>
+    <p>You may withdraw consent to non-essential cookies at any time; we honor those choices promptly. Adjust preferences using the website interface or cookie banner to change consent levels.</p>
+  </li>
+  <li>
+    <h3>Cookies and Personalized Content</h3>
+    <p>Cookies enable delivering personalized content, product recommendations, and localized information, enhancing your website experience based on your preferences and interaction history.</p>
+  </li>
+  <li>
+    <h3>Cookies and Account Management</h3>
+    <p>Cookies assist in securing user accounts and sessions, enabling authentication without repeated logins while protecting against unauthorized access.</p>
+  </li>
+  <li>
+    <h3>Cookies and Compliance Monitoring</h3>
+    <p>We use cookies to monitor compliance with legal obligations and internal policies, supporting secure and lawful service operation, including audit trails and risk detection.</p>
+  </li>
+  <li>
+    <h3>Cookies in Mobile Apps and Devices</h3>
+    <p>Cookies and similar tracking may also be used within mobile app versions or on mobile browsers, adapting to device contexts while ensuring user privacy controls remain available.</p>
+  </li>
+  <li>
+    <h3>Cookies and User Preferences Storage</h3>
+    <p>Cookies store preferences such as language and theme for a consistent, user-friendly browsing experience across sessions, reducing repetitive selection input.</p>
+  </li>
+  <li>
+    <h3>Cookies and Session Management</h3>
+    <p>Session cookies maintain state during your visit, enabling multi-page navigation and feature access. These expire shortly after you leave the site to protect privacy.</p>
+  </li>
+  <li>
+    <h3>Cookies Policy Updates</h3>
+    <p>This Cookies Policy may be updated as technologies or regulations evolve. We encourage you to review it periodically to stay informed of how cookies impact your privacy.</p>
+  </li>
+  <li>
+    <h3>Contacting Us About Cookies</h3>
+    <p>If you have questions or concerns about our use of cookies, please contact Woodland Essence via the contact information provided below. We are committed to transparency and protecting your privacy.</p>
+  </li>
+</ol>
+
+</main>
+
+<footer role="contentinfo">
+  &copy; 2024 Woodland Essence Garden Design &nbsp;|&nbsp;
+  <a href="privacy.html" tabindex="0">Privacy Policy</a> &nbsp;|&nbsp;
+  <a href="terms.html" tabindex="0">Terms and Conditions</a> &nbsp;|&nbsp;
+  <a href="contact.html" tabindex="0">Contact Us</a>
+  <div class="footer-contact" aria-label="Contact information" style="margin-top: 16px;">
+    715 Broadway, New York, NY 10003, USA&nbsp;|&nbsp;+1 (877) 544-6872
+  </div>
+</footer>
+
+<div id="cookie-consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent banner" aria-modal="true" hidden>
+  <p>We use cookies to personalize content and ads, to provide social media features, and to analyze our traffic. Please accept or decline cookies.</p>
+  <button id="accept-cookies" aria-label="Accept cookies">Accept</button>
+  <button id="decline-cookies" aria-label="Decline cookies">Decline</button>
+</div>
+
+<script>
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-menu');
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+    navToggle.setAttribute('aria-expanded', !expanded);
+    mobileNav.classList.toggle('show');
+  });
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.setAttribute('aria-expanded', false);
+      mobileNav.classList.remove('show');
+    });
+  });
+
+  // Cookie consent logic
+  const cookieBanner = document.getElementById('cookie-consent-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const declineBtn = document.getElementById('decline-cookies');
+
+  // Check cookie consent
+  function hasConsented() {
+    return localStorage.getItem('cookieConsent') === 'accepted';
+  }
+  function hasDeclined() {
+    return localStorage.getItem('cookieConsent') === 'declined';
+  }
+
+  function showBanner() {
+    if (!hasConsented() && !hasDeclined()) {
+      cookieBanner.hidden = false;
+    }
+  }
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    cookieBanner.hidden = true;
+    // Initialize or enable cookies functionality here if needed
+  }
+  function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    cookieBanner.hidden = true;
+    // Disable non-essential cookies here if needed
+  }
+
+  acceptBtn.addEventListener('click', acceptCookies);
+  declineBtn.addEventListener('click', declineCookies);
+
+  window.addEventListener('load', showBanner);
+</script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Woodland Essence Garden Design Services</title>
+<meta name="description" content="Professional garden design services inspired by woodland essence and natural beauty. Transform your garden with expert landscaping." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; 
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: #fafaf7;
+    color: #374151;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #2f855a; /* Woodland green */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #22543d;
+    outline: none;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+  /* Header */
+  header {
+    background: #ffffffcc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid #d1d5db;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #276749;
+    letter-spacing: 0.05em;
+    user-select: none;
+  }
+  nav.desktop-nav {
+    display: flex;
+    gap: 32px;
+  }
+  nav.desktop-nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  nav.desktop-nav a:hover, nav.desktop-nav a:focus {
+    background-color: #daf5e2;
+    color: #22543d;
+  }
+  /* Mobile Nav */
+  .mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #276749;
+    font-size: 32px;
+  }
+  nav.mobile-nav {
+    display: none;
+    background: #def4e3;
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 12px;
+    position: absolute;
+    width: 100%;
+    top: 64px;
+    left: 0;
+    box-shadow: 0 4px 16px rgb(39 103 73 / 0.2);
+    border-bottom: 1px solid #a7bfa8;
+  }
+  nav.mobile-nav a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #22543d;
+  }
+  nav.mobile-nav a:hover,
+  nav.mobile-nav a:focus {
+    background-color: #c4e1bf;
+    outline: none;
+  }
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #dceadf 0%, #aed9a7 100%);
+    color: #1a202c;
+    padding: 96px 24px 80px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    user-select: none;
+  }
+  .hero p {
+    margin-top: 24px;
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #2f855a;
+  }
+  .hero button {
+    margin-top: 40px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background-color: #2f855a;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    padding: 16px 48px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 15px rgba(47, 133, 90, 0.3);
+  }
+  .hero button:hover,
+  .hero button:focus {
+    background-color: #276749;
+    outline: none;
+  }
+  /* Main content - scrollable with large content */
+  main {
+    flex: 1 0 auto;
+    background: #f5f7f4;
+    padding: 48px 0 96px;
+  }
+  /* Section styles */
+  section {
+    margin-bottom: 64px;
+  }
+  section .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  section .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #22543d;
+    user-select: none;
+  }
+  section .section-header p {
+    font-size: 1.125rem;
+    color: #4a5568;
+    max-width: 720px;
+    margin: 16px auto 0;
+  }
+  /* Services section */
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 36px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.05);
+    padding: 24px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover,
+  .service-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 0.1);
+  }
+  .service-image {
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    user-select: none;
+    box-shadow: 0 6px 15px rgb(34 84 61 / 0.2);
+  }
+  .service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #276749;
+    margin-bottom: 12px;
+  }
+  .service-card p.description {
+    flex-grow: 1;
+    color: #4a5568;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    min-height: 96px;
+  }
+  .service-price {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #22543d;
+  }
+  /* Gallery */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .gallery-item {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 14px rgb(0 0 0 / 0.06);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 22px 48px rgb(0 0 0 / 0.16);
+  }
+  .gallery-item img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    user-select: none;
+  }
+  /* Customer Satisfaction */
+  .customer-satisfaction {
+    background: #e6f4ea;
+    border-radius: 16px;
+    padding: 48px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgb(67 160 71 / 0.15);
+    text-align: center;
+  }
+  .customer-satisfaction h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #276749;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  .customer-satisfaction p {
+    font-size: 1.125rem;
+    color: #276749;
+    line-height: 1.5;
+  }
+  /* Disclaimer */
+  .disclaimer {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    color: #718096;
+    padding: 24px;
+    border-top: 1px solid #d1d5db;
+    user-select: none;
+  }
+  /* Address */
+  .address-block {
+    max-width: 900px;
+    margin: 48px auto 24px;
+    padding: 16px;
+    background: #d0e8d2;
+    border-radius: 12px;
+    color: #22543d;
+    font-weight: 600;
+    user-select: none;
+    box-shadow: 0 8px 18px rgb(34 84 61 / 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+  }
+  .material-icons.address-icon {
+    font-size: 28px;
+    color: #276749;
+  }
+  /* Footer */
+  footer {
+    background-color: #276749;
+    color: #d9f7d9;
+    padding: 32px 24px;
+    text-align: center;
+    user-select: none;
+  }
+  footer a {
+    color: #bbe6bb;
+    text-decoration: underline;
+  }
+  footer a:hover,
+  footer a:focus {
+    color: #e6f4ea;
+    outline: none;
+  }
+  /* New sections */
+  .about-us, .why-choose-us, .tips-gardening {
+    max-width: 900px;
+    margin: 0 auto 64px;
+    background: #ffffffdd;
+    border-radius: 16px;
+    padding: 32px 40px;
+    box-shadow: 0 8px 24px rgb(34 84 61 / 0.12);
+  }
+  .about-us h2, .why-choose-us h2, .tips-gardening h2 {
+    color: #22543d;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    user-select: none;
+  }
+  .about-us p, .why-choose-us p, .tips-gardening p {
+    font-size: 1.125rem;
+    color: #4a5568;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .why-choose-us ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #2f855a;
+    font-weight: 600;
+  }
+  .why-choose-us ul li {
+    margin-bottom: 12px;
+  }
+  .tips-gardening ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    color: #276749;
+    font-weight: 600;
+  }
+  .tips-gardening ol li {
+    margin-bottom: 12px;
+  }
+  /* Responsive Layout */
+  @media (max-width: 767px) {
+    nav.desktop-nav {
+      display: none;
+    }
+    .mobile-nav-toggle {
+      display: block;
+    }
+    nav.mobile-nav.show {
+      display: flex;
+    }
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 90vw;
+    }
+    .hero button {
+      padding: 14px 36px;
+      font-size: 1rem;
+    }
+    .services-list {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-us, .why-choose-us, .tips-gardening {
+      padding: 24px 20px;
+      margin-bottom: 48px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hero h1 {
+      font-size: 2.75rem;
+    }
+    .services-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    nav.mobile-nav {
+      display: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container header-inner">
+    <div class="logo" aria-label="Woodland Essence Garden Design Home">Woodland Essence</div>
+    <nav class="desktop-nav" role="navigation" aria-label="Primary Navigation">
+     <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile Primary Navigation">
+ <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main id="main-content" tabindex="-1">
+  <section id="home" class="hero" role="region" aria-label="Hero Section">
+    <h1>Experience the True Essence of Woodland Garden Design</h1>
+    <p>Transform your outdoor space into a natural haven with our expert woodland-inspired garden design services.</p>
+    <button type="button" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" aria-label="View our garden design services">Explore Our Services</button>
+  </section>
+
+  <section id="about-us" class="about-us" role="region" aria-label="About Woodland Essence">
+    <h2>About Us</h2>
+    <p>Woodland Essence is dedicated to creating magical and sustainable garden designs inspired by the natural beauty of woodlands and forest ecosystems. With over 15 years of experience, our team combines horticulture expertise and artistic landscape design to craft peaceful, vibrant spaces that connect you to nature.</p>
+    <p>Our approach centers around ecological sensitivity and a deep respect for native flora and fauna. We focus on restoring and enhancing the natural balance of your outdoor space by incorporating native trees, shrubs, wildflowers, and carefully planned hardscape elements, which enrich both the aesthetics and ecology of your garden.</p>
+    <p>We work closely with each client to understand their lifestyle, preferences, and site characteristics. Whether you want a serene retreat, an inviting family garden, or a vibrant habitat welcoming birds and pollinators, we tailor every project to capture the unique spirit and essence of the woodland environment.</p>
+    <p>In addition to design and installation, Woodland Essence also offers ongoing maintenance and seasonal care to ensure your garden evolves gracefully over time. From spring planting to autumn leaf cleanups, we provide expert care to nurture your woodland paradise year-round.</p>
+  </section>
+
+  <section id="why-choose-us" class="why-choose-us" role="region" aria-label="Why Choose Woodland Essence">
+    <h2>Why Choose Us</h2>
+    <p>Choosing Woodland Essence means partnering with a passionate team committed to your garden's success and environmental stewardship. Here's why we stand out:</p>
+    <ul>
+      <li>Tailored Woodland Garden Designs: We carefully customize every project to harmonize with your site's natural conditions and your personal vision, ensuring a garden as unique as you are.</li>
+      <li>Expert Knowledge of Native Plants: Our deep understanding of local ecosystems allows us to select plants that thrive naturally, supporting native wildlife and promoting biodiversity.</li>
+      <li>High-Quality Craftsmanship: From natural stone pathways to handcrafted garden features, our skilled team delivers durable, elegant, and environmentally friendly solutions.</li>
+      <li>Comprehensive Maintenance Plans: Beyond installation, we offer personalized maintenance programs to keep your garden healthy, vibrant, and beautifully maintained throughout the seasons.</li>
+      <li>Strong Environmental Commitment: Every aspect of our work prioritizes sustainability — reducing water consumption, enhancing habitat value, and minimizing ecological footprint.</li>
+      <li>Outstanding Client Satisfaction: Our clients trust us to bring their woodland garden visions to life, reflected in glowing testimonials and ongoing relationships.</li>
+      <li>Innovative and Artistic Vision: We merge ecological principles with creative design, blending function and beauty to craft inspiring outdoor spaces that uplift and rejuvenate.</li>
+      <li>Responsive Communication and Support: We believe in collaboration and transparency, keeping you informed during every step and offering guidance beyond project completion.</li>
+    </ul>
+  </section>
+
+  <section id="services" role="region" aria-label="Garden Design Services" class="container" >
+    <div class="section-header">
+      <h2>Our Expert Garden Design Services</h2>
+      <p>Personalized, sustainable, and enchanting woodland garden designs tailored to elevate your outdoor experience.</p>
+    </div>
+    <div class="services-list">
+      <article class="service-card" tabindex="0" aria-label="Woodland Garden Consultation Service">
+        <img class="service-image" src="s1.png" alt="Garden expert discussing woodland garden plans with a client outdoors" loading="lazy" />
+        <h3>Woodland Garden Consultation</h3>
+        <p class="description">Our experts evaluate your space and soil to craft a unique woodland garden design that embraces natural beauty and sustainability.</p>
+        <p class="service-price">$150 - One-time Consultation Fee</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Plant Selection and Installation">
+        <img class="service-image" src="s2.png" alt="Native woodland plants selected and being planted in a garden" loading="lazy" />
+        <h3>Plant Selection & Installation</h3>
+        <p class="description">We provide a curated selection of native woodland plants and perform expert installation to ensure healthy growth and vibrant ecosystems.</p>
+        <p class="service-price">$800 - Starting Price</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Hardscaping & Pathways Design">
+        <img class="service-image" src="s3.png" alt="Natural stone path winding through a woodland garden" loading="lazy" />
+        <h3>Hardscaping & Pathways</h3>
+        <p class="description">Create natural and sustainable paths, stone features, and seating areas that blend seamlessly with your woodland garden.</p>
+        <p class="service-price">$1,200 - Project Based Pricing</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Wildlife Habitat Creation">
+        <img class="service-image" src="s4.png" alt="Birdhouses and feeders placed in a natural garden setting" loading="lazy" />
+        <h3>Wildlife Habitat Creation</h3>
+        <p class="description">Promote biodiversity by adding birdhouses, feeders, and native plant habitats to encourage local wildlife.</p>
+        <p class="service-price">$600 - Package Price</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Garden Maintenance and Seasonal Care">
+        <img class="service-image" src="s5.png" alt="Gardener pruning plants and preparing woodland garden for seasonal changes" loading="lazy" />
+        <h3>Garden Maintenance & Seasonal Care</h3>
+        <p class="description">Keep your woodland garden thriving year-round with tailored maintenance, pruning, and seasonal planting services.</p>
+        <p class="service-price">$300/month - Subscription</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Landscape Lighting Installation">
+        <img class="service-image" src="s6.png" alt="Soft warm landscape lighting illuminating woodland garden pathway at dusk" loading="lazy" />
+        <h3>Landscape Lighting Installation</h3>
+        <p class="description">Enhance the ambiance with subtle, energy-efficient lighting designed to highlight your garden's natural features.</p>
+        <p class="service-price">$700 - Base Price</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="gallery" role="region" aria-label="Gallery" class="container">
+    <div class="section-header">
+      <h2>Gallery of Woodland Garden Designs</h2>
+      <p>Explore our projects showcasing natural, serene, and breathtaking woodland garden landscapes.</p>
+    </div>
+    <div class="gallery-grid" aria-live="polite">
+      <figure class="gallery-item" tabindex="0">
+        <img src="g1.png" alt="A peaceful woodland garden pathway lined with moss-covered stones and towering trees" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g2.png" alt="Vibrant wildflowers blooming in a sunlit forest clearing with lush green backdrop" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g3.png" alt="Close-up of native woodland plants including ferns, hostas, and berry shrubs" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g4.png" alt="Rustic wooden garden bench resting under a canopy of leafy trees in a woodland garden" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g5.png" alt="Stone sculpture garden feature surrounded by native grasses and small trees" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g6.png" alt="Wooden bird feeder hanging from tree branch, attracting colorful birds" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g7.png" alt="Soft landscape lighting illuminating a garden path and trees at twilight" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g8.png" alt="Gardener pruning bushes and caring for plants during fall season" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g9.png" alt="Woodland garden with birdhouses and insect hotels promoting wildlife" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g10.png" alt="Natural stone pathway zigzagging through a lush woodland garden" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g11.png" alt="Serene woodland water feature with small cascading waterfall and pond" loading="lazy" />
+      </figure>
+      <figure class="gallery-item" tabindex="0">
+        <img src="g12.png" alt="Close-up of a butterfly resting on woodland flowers in a vibrant garden" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <section id="tips" class="tips-gardening" role="region" aria-label="Gardening Tips for Woodland Gardens" tabindex="0">
+    <h2>Tips for Gardening</h2>
+    <p>Creating and maintaining a thriving woodland garden can be a delightful and enriching experience. Here are some essential tips to help your garden flourish naturally:</p>
+    <ol>
+      <li><strong>Choose Native Plants:</strong> Select species native to your region to support local wildlife and ensure greater resilience.</li>
+      <li><strong>Prepare Your Soil:</strong> Test and enrich your soil with organic matter and ensure proper drainage to nurture healthy roots.</li>
+      <li><strong>Mulch Generously:</strong> Use leaf litter or wood chips to retain moisture, suppress weeds, and return nutrients to the soil.</li>
+      <li><strong>Mindful Pruning:</strong> Prune selectively to encourage natural growth while maintaining balance and air circulation.</li>
+      <li><strong>Create Natural Habitat:</strong> Include birdhouses, log piles, and pollinator-friendly plants to invite beneficial wildlife.</li>
+      <li><strong>Water Wisely:</strong> Water deeply but infrequently, especially during dry spells, to encourage drought tolerance.</li>
+      <li><strong>Plan for Diversity:</strong> Include a variety of plant heights, bloom times, and textures for an attractive, year-round garden.</li>
+      <li><strong>Protect from Pests Organically:</strong> Use companion plants or natural deterrents rather than pesticides whenever possible.</li>
+      <li><strong>Seasonal Care:</strong> Adapt your care routine to the seasons by protecting plants in winter and refreshing beds in spring.</li>
+      <li><strong>Enjoy Your Garden:</strong> Spend time observing and relaxing to build a deeper connection with your woodland retreat.</li>
+    </ol>
+  </section>
+
+  <section role="region" aria-label="Customer Satisfaction" class="customer-satisfaction container" tabindex="0">
+    <h3>Our Commitment to Your Satisfaction</h3>
+    <p>At Woodland Essence, customer satisfaction isn’t just a goal – it’s a promise.
+      We ensure every project reflects the unique vision of our clients while respecting the delicate beauty of nature.
+      Join our growing family of delighted customers who enjoy peaceful, vibrant, and sustainable gardens year-round.</p>
+  </section>
+
+  <section role="region" aria-label="Contact and Disclaimer" class="container" id="contact">
+    <div class="address-block" aria-label="Company address">
+      <span class="material-icons address-icon" aria-hidden="true">location_on</span>
+      715 Broadway, New York, NY 10003, USA
+    </div>
+    <div class="disclaimer" tabindex="0" id="disclaimer">
+      <p><strong>Disclaimer:</strong> Woodland Essence provides personalized garden design services based on the natural woodland theme. While we strive to match your vision, outcomes may vary according to environmental factors and seasonal changes. All pricing is subject to change based on specific project requirements and consultation. Please contact us for detailed estimates.</p>
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  &copy; 2024 Woodland Essence Garden Design &nbsp;|&nbsp; 
+  <a href="#contact" tabindex="0">Contact Us</a> &nbsp;|&nbsp;
+  <a href="#disclaimer" tabindex="0">Disclaimer</a>
+</footer>
+
+<script>
+  // Mobile menu toggle script
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-menu');
+
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+    navToggle.setAttribute('aria-expanded', !expanded);
+    mobileNav.classList.toggle('show');
+  });
+
+  // Accessibility: close mobile menu on link click (mobile)
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.setAttribute('aria-expanded', false);
+      mobileNav.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>
+
